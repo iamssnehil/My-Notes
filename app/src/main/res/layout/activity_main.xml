@@ -18,7 +18,7 @@
         android:id="@+id/contentEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Note Content"
+        android:hint="Note Content / Tap mic to speak"
         android:layout_marginTop="16dp"
         android:inputType="textMultiLine"
         android:minLines="5"/>
