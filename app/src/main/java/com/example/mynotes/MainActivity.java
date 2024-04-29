@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -17,6 +18,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final int REQUEST_CODE_SPEECH_INPUT = 100;
+    EditText contentEditText;
     private static final String PREFS_NAME = "NotePrefs";
     private static final String KEY_NOTE_COUNT = "NoteCount";
     private LinearLayout notesContainer;
@@ -26,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        contentEditText = findViewById(R.id.contentEditText);
+        ImageView imageView = findViewById(R.id.imageView);
 
         notesContainer = findViewById(R.id.notesContainer);
         Button saveButton = findViewById(R.id.saveButton);
@@ -67,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void saveNote(){
         EditText titleEditText = findViewById(R.id.titleEditText);
-        EditText contentEditText = findViewById(R.id.contentEditText);
+        contentEditText = findViewById(R.id.contentEditText);
         String title = titleEditText.getText().toString();
         String content = contentEditText.getText().toString();
 
