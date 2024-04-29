@@ -27,7 +27,8 @@
         android:id="@+id/imageView"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginLeft="170dp"/>
+        android:layout_marginLeft="170dp"
+        android:src="@drawable/mic"/>
 
     <Button
         android:id="@+id/saveButton"
