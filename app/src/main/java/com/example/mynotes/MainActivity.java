@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
         contentEditText = findViewById(R.id.contentEditText);
         ImageView imageView = findViewById(R.id.imageView);
+        
         //button click to show speech to text dialog
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        
         notesContainer = findViewById(R.id.notesContainer);
         Button saveButton = findViewById(R.id.saveButton);
 
@@ -87,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
 
         displayNotes();
     }
+    
     //receive voice input and handle it
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
