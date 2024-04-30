@@ -48,7 +48,18 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
                 intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
                 intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Hi Speak Something");
+                //start intent
+                try {
+                    //if there no error
+                    //show dialog
+                    startActivityForResult(intent, REQUEST_CODE_SPEECH_INPUT);
                 }
+                catch (Exception e){
+                    //there was some error
+                    //get message of error and show
+                    Toast.makeText(MainActivity.this, "Sorry, Your Device not Supported", Toast.LENGTH_SHORT).show();
+                }
+            }
         });
         notesContainer = findViewById(R.id.notesContainer);
         Button saveButton = findViewById(R.id.saveButton);
