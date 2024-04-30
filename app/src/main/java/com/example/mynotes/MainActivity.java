@@ -88,6 +88,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        switch(requestCode) {
+            case REQUEST_CODE_SPEECH_INPUT: {
+                if(resultCode == RESULT_OK && null!=data){
+                    //get text array from void intent
+                    ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                    //set to text view
+                    contentEditText.setText((String)result.get(0));
+                }
+                break;
+            }
+        }
     }
 
     private void displayNotes() {
