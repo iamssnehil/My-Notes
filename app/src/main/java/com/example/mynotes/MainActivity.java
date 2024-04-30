@@ -76,6 +76,11 @@ public class MainActivity extends AppCompatActivity {
 
         displayNotes();
     }
+    //receive voice input and handle it
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 
     private void displayNotes() {
         for(Note note: noteList){
