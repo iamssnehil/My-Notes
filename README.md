@@ -1,2 +1,2 @@
 # My Notes
-This project is made on Android Studio using Java language. This is a Notes Application in which you can create, delete and save notes. This application also provides the feature of voice typing.
+This project presents a note-taking application developed for the Android platform using the Java programming language within the Android Studio IDE. The application offers core note management functionalities, enabling users to create, save, and delete text-based notes. Additionally, voice typing functionality is integrated for hands-free convenience.
